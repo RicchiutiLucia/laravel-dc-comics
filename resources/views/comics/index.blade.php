@@ -6,7 +6,10 @@
 
 @section('main-content')
 
-    <h1>Lista fumetti:</h1>
+    <div class="text-center mb-4 text-white ">
+        <h1>lista fumetti</h1>
+        <a href="{{route('comics.create')}}" class="btn btn-primary">Aggiungi un nuovo fumetto</a>
+    </div>
     <div class="container">
         <div class="row d-flex justify-content-between">
             @foreach ($comics as $comic)
