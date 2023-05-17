@@ -27,7 +27,7 @@
                             <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop{{$comic->id}}">
                                 Elimina
                               </button>
-                            @include('partials.modal')
+                            @include('partials.confirmUser')
                         </div>
                     </div>
                 </div>
