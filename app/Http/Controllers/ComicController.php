@@ -39,13 +39,13 @@ class ComicController extends Controller
     {
         
         $request->validate([
-            'thumb' => 'required|url|max:255',
-            'title' => 'required|max:50',
+            'title' => 'required|max:255',
             'description' => 'nullable|max:65535',
-            'price' => 'required|max:10',
-            'series' => 'required|max:50',
-            'type' => 'nullable|max:50',
-            'sale_date' => 'nullable'
+            'thumb' => 'required|url|max:255',
+            'price' => 'required|numeric|decimal:2',
+            'series' => 'required|max:100',
+            'sale_date' => 'nullable|max:20',
+            'type' => 'nullable|max:30',
         ]);
       
         $data = $request->all();
@@ -102,13 +102,13 @@ class ComicController extends Controller
     public function update(Request $request, Comic $comic)
     {
         $request->validate([
-            'thumb' => 'required|url|max:255',
-            'title' => 'required|max:50',
+            'title' => 'required|max:255',
             'description' => 'nullable|max:65535',
-            'price' => 'required|max:10',
-            'series' => 'required|max:50',
-            'type' => 'nullable|max:50',
-            'sale_date' => 'nullable'
+            'thumb' => 'required|url|max:255',
+            'price' => 'required|numeric|decimal:2',
+            'series' => 'required|max:100',
+            'sale_date' => 'nullable|max:20',
+            'type' => 'nullable|max:30',
         ]);
         
         $data = $request->all();
